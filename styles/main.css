@@ -83,8 +83,13 @@ body {
   cursor: pointer;
 }
 
-.basket-container {
+.height-50 {
   height: 50px;
+}
+
+.cart-title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 #cart-button:hover {
@@ -113,6 +118,14 @@ body {
 
 .invisible {
   display: none !important;
+}
+
+#heart-icon {
+  font-size: 24px;
+}
+
+#heart-icon:hover {
+  cursor: pointer;
 }
 
 .subtotal-wrapper {

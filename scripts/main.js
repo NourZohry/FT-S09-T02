@@ -9,6 +9,12 @@ function decrementCounter() {
     purchaseDetails['amount'] = currentAmount;
     $("#subtotal-price").text("$" + (purchaseDetails['amount'] * 120).toString());
 
+    if (purchaseDetails['amount'] == 0) {
+        $(".item-in-basket").addClass("invisible");
+        $(".no-item-in-basket").removeClass("invisible");
+
+        $('#basket-wrapper').children().toggleClass("invisible");
+    }
 }
 
 function incrementCounter() {
@@ -56,6 +62,7 @@ $(document).ready(function(){
 
     $("#add-to-basket-button").click(function(){
         $('#basket-wrapper').children().toggleClass("invisible");
+        $(".item-amount").text("2");
         purchaseDetails['amount'] = 2;
     });
 
@@ -72,10 +79,16 @@ $(document).ready(function(){
     
         $("#cart-button, #close-cart-button").click(function() {
             $("#cart").toggleClass("invisible");
+            if (purchaseDetails['amount'] == 0) {
+                $(".item-in-basket").addClass("invisible");
+                $(".no-item-in-basket").removeClass("invisible");
+            }
+            else {
+                $(".item-in-basket").removeClass("invisible");
+                $(".no-item-in-basket").addClass("invisible");
+                $("#subtotal-price").text("$" + (purchaseDetails['amount'] * 120).toString());
+            }
         });
-
-        
-        $("#subtotal-price").text("$" + (purchaseDetails['amount'] * 120).toString());
 
 
         
@@ -127,6 +140,11 @@ $(document).ready(function(){
 
     // });
 
+
+    $("#heart-icon").click(function() {
+        $("#heart-icon").toggleClass("bi-suit-heart");
+        $("#heart-icon").toggleClass("bi-suit-heart-fill");
+    });
 
 
 

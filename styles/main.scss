@@ -106,7 +106,7 @@ body {
     }
 }
 
-.basket-container {
+.height-50 {
     height: 50px;
 }
 
@@ -124,6 +124,11 @@ body {
 //         cursor: pointer;
 //     }
 // }
+
+.cart-title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
 
 
 
@@ -154,6 +159,14 @@ body {
 
 .invisible {
     display: none !important;
+}
+
+#heart-icon {
+    font-size: 24px;
+}
+
+#heart-icon:hover {
+    cursor: pointer;
 }
 
 // .font-tenor {
