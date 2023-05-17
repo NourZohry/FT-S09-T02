@@ -39,13 +39,13 @@ $gray8: #888888;
             outline: 1px solid $gray8;
         }
     }
-    #item-color-black {
+    .item-color-black {
         background-color: black;
     }
-    #item-color-golden {
+    .item-color-golden {
         background-color: $golden;
     }
-    #item-color-silver {
+    .item-color-silver {
         background-color: $silver;
     }
 }
@@ -90,4 +90,8 @@ $gray8: #888888;
 
 .invisible {
     display: none !important;
+}
+
+.font-tenor {
+    font-family: 'Tenor Sans', sans-serif;
 }

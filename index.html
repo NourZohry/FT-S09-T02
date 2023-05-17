@@ -84,17 +84,17 @@
     </div>
 
     <div class="row">
-      <div class="col-6 item-color-wrapper d-flex" id="color-wrapper">
+      <div class="col-6 item-color-wrapper d-flex color-wrapper">
         <h4 class="item-color-text">Color</h4>
-        <div data-item-color="black" class="rounded-circle active item-color" id="item-color-black"></div>
-        <div data-item-color="golden" class="rounded-circle item-color" id="item-color-golden"></div>
-        <div data-item-color="silver" class="rounded-circle item-color" id="item-color-silver"></div>
+        <div data-item-color="black" class="rounded-circle active item-color item-color-black"></div>
+        <div data-item-color="golden" class="rounded-circle item-color item-color-golden"></div>
+        <div data-item-color="silver" class="rounded-circle item-color item-color-silver"></div>
       </div>
-      <div class="col-6 item-size-wrapper d-flex" id="size-wrapper">
+      <div class="col-6 item-size-wrapper d-flex size-wrapper">
         <h4 class="item-size-text">Size</h4>
-        <div data-item-size="small" class="active item-size" id="item-size-small">S</div>
-        <div data-item-size="medium" class="item-size" id="item-size-medium">M</div>
-        <div data-item-size="large" class="item-size" id="item-size-large">L</div>
+        <div data-item-size="small" class="active item-size item-size-small">S</div>
+        <div data-item-size="medium" class="item-size item-size-medium">M</div>
+        <div data-item-size="large" class="item-size item-size-large">L</div>
       </div>
     </div>
   </div>
@@ -112,14 +112,54 @@
 
     </div>
     <div class="d-flex justify-content-center gap-3 align-items-center invisible" id="amount-basket-wrapper">
-      <i class="bi bi-dash-circle circle-minus-icon" id="minus-item-button"></i>
-      <h6 class="my-0" id="item-amount">2</h6>
-      <i class="bi bi-plus-circle circle-plus-icon" id="plus-item-button"></i>
+      <i class="bi bi-dash-circle circle-minus-icon minus-item-button"></i>
+      <h6 class="my-0 item-amount">2</h6>
+      <i class="bi bi-plus-circle circle-plus-icon plus-item-button"></i>
 
 
     </div>
   </div>
   </footer>
+
+  <div class="w-100 h-100 invisible" id="cart" style="position: fixed; top: 0; background-color: white; z-index: 2;">
+    <div class="cart-page">
+      <div class="container">
+        <i class="bi bi-x-lg" id="close-cart-button"></i>
+      </div>
+
+      <h1 class="cart-title font-tenor">CART</h1>
+      <div class="row">
+        <div class="col-4">
+          <img class="img-fluid" src="assets/images/carousel-1.png" alt="purchased-item">
+        </div>
+        <div class="col-8 d-flex flex-column">
+          <h1 class="item-name">MOHAN</h1>
+          <h2 class="item-desc">Recycle Boucle Knit Cardigan Pink</h2>
+          <div class="d-flex flex-row">
+            <i class="bi bi-dash-circle circle-minus-icon minus-item-button"></i>
+            <h6 class="my-0 item-amount">2</h6>
+            <i class="bi bi-plus-circle circle-plus-icon plus-item-button"></i>
+          </div>
+          <h3 class="item-price">$120</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 item-color-wrapper d-flex color-wrapper">
+          <h4 class="item-color-text">Color</h4>
+          <div data-item-color="black" class="rounded-circle active item-color item-color-black"></div>
+          <div data-item-color="golden" class="rounded-circle item-color item-color-golden"></div>
+          <div data-item-color="silver" class="rounded-circle item-color item-color-silver"></div>
+        </div>
+        <div class="col-6 item-size-wrapper d-flex size-wrapper">
+          <h4 class="item-size-text">Size</h4>
+          <div data-item-size="small" class="active item-size item-size-small">S</div>
+          <div data-item-size="medium" class="item-size item-size-medium">M</div>
+          <div data-item-size="large" class="item-size item-size-large">L</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
 

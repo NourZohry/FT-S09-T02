@@ -26,13 +26,13 @@
   border: 2px solid white;
   outline: 1px solid #888888;
 }
-.item-color-wrapper #item-color-black {
+.item-color-wrapper .item-color-black {
   background-color: black;
 }
-.item-color-wrapper #item-color-golden {
+.item-color-wrapper .item-color-golden {
   background-color: #DD8560;
 }
-.item-color-wrapper #item-color-silver {
+.item-color-wrapper .item-color-silver {
   background-color: #E1E0DB;
 }
 
@@ -66,4 +66,8 @@
 
 .invisible {
   display: none !important;
+}
+
+.font-tenor {
+  font-family: "Tenor Sans", sans-serif;
 }/*# sourceMappingURL=main.css.map */

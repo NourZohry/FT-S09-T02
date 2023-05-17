@@ -1,17 +1,18 @@
 function decrementCounter() {
-    currentAmount = Number($("#item-amount").text());
+    currentAmount = Number($(".item-amount").eq(0).text());
     if (currentAmount == 0) {
         return;
     }
     currentAmount = currentAmount - 1;
-    $("#item-amount").text(currentAmount.toString());
+        $(".item-amount").text(currentAmount.toString());
+
     purchaseDetails['amount'] = currentAmount;
 }
 
 function incrementCounter() {
-    currentAmount = Number($("#item-amount").text());
+    currentAmount = Number($(".item-amount").eq(0).text());
     currentAmount = currentAmount + 1;
-    $("#item-amount").text(currentAmount.toString());
+    $(".item-amount").text(currentAmount.toString());
     purchaseDetails['amount'] = currentAmount;
 }
 
@@ -27,13 +28,14 @@ function activeSelect(text) {
     //     return -1;
     // }
     
-    var mainList = $("#" + text + "-wrapper").find(".item-" + text);
+    var mainList = $("." + text + "-wrapper").find(".item-" + text);
     console.log(mainList);
     for (let i = 0; i < mainList.length; i++) {
         const listItem = mainList.eq(i);
         listItem.click(function(){
             mainList.removeClass("active");
-            listItem.addClass("active");
+            // let activeColors = mainList.find(`[data-item-color='${listItem.attr("data-item-color")}']`);
+            $('.item-' + text + '[data-item-'+ text + '=' + listItem.attr("data-item-" + text) + ']').addClass('active');
             purchaseDetails[text] = listItem.attr("data-item-" + text);
         })
     }
@@ -53,14 +55,21 @@ $(document).ready(function(){
         purchaseDetails['amount'] = 2;
     });
 
-    minusItemButton = $("#minus-item-button");
+    minusItemButton = $(".minus-item-button");
     minusItemButton.click(function(){decrementCounter()});
 
-    plusItemButton = $("#plus-item-button");
+    plusItemButton = $(".plus-item-button");
     plusItemButton.click(function(){incrementCounter()});
 
     activeSelect("color");
     activeSelect("size");
+
+    // Cart
+    
+        $("#cart-button, #close-cart-button").click(function() {
+            $("#cart").toggleClass("invisible");
+        });
+        
     
     // /* Cart */
     // mainContainer = $("#main-container");
