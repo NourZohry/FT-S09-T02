@@ -7,6 +7,8 @@ function decrementCounter() {
         $(".item-amount").text(currentAmount.toString());
 
     purchaseDetails['amount'] = currentAmount;
+    $("#subtotal-price").text("$" + (purchaseDetails['amount'] * 120).toString());
+
 }
 
 function incrementCounter() {
@@ -14,6 +16,8 @@ function incrementCounter() {
     currentAmount = currentAmount + 1;
     $(".item-amount").text(currentAmount.toString());
     purchaseDetails['amount'] = currentAmount;
+    $("#subtotal-price").text("$" + (purchaseDetails['amount'] * 120).toString());
+
 }
 
 function activeSelect(text) {
@@ -69,6 +73,11 @@ $(document).ready(function(){
         $("#cart-button, #close-cart-button").click(function() {
             $("#cart").toggleClass("invisible");
         });
+
+        
+        $("#subtotal-price").text("$" + (purchaseDetails['amount'] * 120).toString());
+
+
         
     
     // /* Cart */
