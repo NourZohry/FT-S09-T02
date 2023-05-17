@@ -1,0 +1,69 @@
+.custom-carousel-indicators button {
+  border: 1px solid gray !important;
+  border-radius: 100%;
+  width: 13px !important;
+  height: 13px !important;
+}
+.custom-carousel-indicators button.active {
+  background-color: gray;
+}
+
+.item-info-wrapper {
+  font-family: "Tenor Sans", sans-serif;
+}
+.item-info-wrapper .item-desc {
+  color: #555555;
+}
+.item-info-wrapper .item-price {
+  color: #DD8560;
+}
+
+.item-color-wrapper .item-color {
+  width: 30px;
+  height: 30px;
+}
+.item-color-wrapper .item-color.active {
+  border: 2px solid white;
+  outline: 1px solid #888888;
+}
+.item-color-wrapper #item-color-black {
+  background-color: black;
+}
+.item-color-wrapper #item-color-golden {
+  background-color: #DD8560;
+}
+.item-color-wrapper #item-color-silver {
+  background-color: #E1E0DB;
+}
+
+.item-size-wrapper .item-size {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid grey;
+  text-align: center;
+  border-radius: 100%;
+}
+.item-size-wrapper .item-size.active {
+  color: white;
+  background-color: black;
+}
+
+.basket-container {
+  height: 50px;
+}
+
+#add-to-basket-button:hover {
+  cursor: pointer;
+}
+
+#amount-basket-wrapper * {
+  font-size: 24px;
+}
+#amount-basket-wrapper i:hover {
+  cursor: pointer;
+}
+
+.invisible {
+  display: none !important;
+}/*# sourceMappingURL=main.css.map */
