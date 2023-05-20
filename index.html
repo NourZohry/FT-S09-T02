@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <link rel="stylesheet" href="styles/main.css">
@@ -22,29 +22,32 @@
 </head>
 
 <body>
-  <header class="mx-5">
+  <header class="mx-5 main-page">
     <!-- place navbar here -->
     <div class="d-flex justify-content-between my-2">
-      <div><img src="assets/images/menu.png" alt="menu" id="menu-button"></div>
-      <div><img src="assets/images/brand.png" alt="brand"></div>
+      <div><img src="assets/images/menu.png" alt="menu" class="cursor-pointer" id="menu-button"></div>
+      <div><a href="#" class="cursor-pointer"><img src="assets/images/brand.png" alt="brand"></a></div>
       <div class="d-flex gap-3">
-        <div><img src="assets/images/search.png" alt="search"></div>
-        <div><img src="assets/images/cart.png" alt="cart" id="cart-button"></div>
+        <div><img src="assets/images/search.png" alt="search" class="cursor-pointer"></div>
+        <div><img src="assets/images/cart.png" alt="cart" class="cursor-pointer" id="cart-button"></div>
       </div>
     </div>
-
   </header>
-  <main class="mx-5">
 
-
+  <main class="mx-5 main-page">
     <div id="carouselExampleIndicators" class="carousel slide pb-5" data-bs-touch="true" data-bs-ride="carousel">
-        <div class="carousel-indicators custom-carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        </div>
+      <div class="carousel-indicators custom-carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="assets/images/carousel-1.png" class="d-block w-100" alt="carousel-1">
@@ -62,97 +65,31 @@
           <img src="assets/images/carousel-5.png" class="d-block w-100" alt="carousel-5">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </div>
 
     <div class="item-info-wrapper">
       <h1 class="item-name mt-5">MOHAN</h1>
       <h2 class="item-desc">Recycle Boucle Knit Cardigan Pink</h2>
       <h3 class="item-price mb-4">$120</h3>
 
-    <div class="d-flex flex-row">
-      <div class="col-6 item-color-wrapper d-flex color-wrapper gap-3 mb-5">
-        <h4 class="item-color-text">Color</h4>
-        <div data-item-color="black" class="rounded-circle active item-color item-color-black"></div>
-        <div data-item-color="golden" class="rounded-circle item-color item-color-golden"></div>
-        <div data-item-color="silver" class="rounded-circle item-color item-color-silver"></div>
-      </div>
-      <div class="col-6 item-size-wrapper d-flex size-wrapper gap-3">
-        <h4 class="item-size-text">Size</h4>
-        <div data-item-size="small" class="active item-size item-size-small">S</div>
-        <div data-item-size="medium" class="item-size item-size-medium">M</div>
-        <div data-item-size="large" class="item-size item-size-large">L</div>
-      </div>
-    </div>
-  </div>
-
-  </main>
-  <footer>
-      <div class="row bg-black height-50 text-white w-100 mx-0" id="basket-wrapper">
-        
-        <div class="d-flex justify-content-between my-2" id="add-to-basket-wrapper">
-      <div class="d-flex gap-2 mx-2" id="add-to-basket-button">
-        <i class="bi bi-plus-lg plus-icon"></i>
-        <div class="add-to-basket-text">Add to basket</div>
-      </div>
-      <i class="bi bi-suit-heart heart-icon mx-2" id="heart-icon"></i>
-
-    </div>
-    <div class="d-flex justify-content-center gap-3 align-items-center invisible" id="amount-basket-wrapper">
-      <i class="font-24 bi bi-dash-circle circle-icon minus-item-button"></i>
-      <h6 class="font-24 my-0 item-amount">2</h6>
-      <i class="font-24 bi bi-plus-circle circle-icon plus-item-button"></i>
-
-
-    </div>
-  </div>
-  </footer>
-
-  <div class="w-100 h-100 invisible" id="cart" style="position: fixed; top: 0; background-color: white; z-index: 2;">
-    <div class="height-50 d-flex align-items-center">
-      <i class="bi bi-x-lg mx-5" id="close-cart-button"></i>
-
-    </div>
-    <h1 class="cart-title invisible">CART</h1>
-    <h1 class="mx-5 cart-title no-item-in-basket" style="color: red;">CART</h1>
-    <div class="no-item-in-basket h-100 d-flex justify-content-center align-items-center">
-      <p>You have no items in your Shopping Bag.</p>
-    </div>
-    <div class="cart-page h-100 mx-5 d-flex flex-column justify-content-between">
-      <div class="item-in-basket">
-        <h1 class="cart-title">CART</h1>
-
-      <div class="row">
-        <div class="col-3">
-          <img class="img-fluid" src="assets/images/carousel-1.png" alt="purchased-item">
-        </div>
-        <div class="col-9 d-flex flex-column justify-content-between">
-          <h1 class="item-name">MOHAN</h1>
-          <h2 class="item-desc">Recycle Boucle Knit Cardigan Pink</h2>
-          <div class="d-flex gap-3 align-items-center">
-            <i class="font-24 bi bi-dash-circle circle-icon minus-item-button"></i>
-            <h6 class="font-24 my-0 item-amount">2</h6>
-            <i class="font-24 bi bi-plus-circle circle-icon plus-item-button"></i>
-          </div>
-          <h3 class="item-price">$120</h3>
-        </div>
-      </div>
-      <div class="row my-4">
-        <div class="col-6 item-color-wrapper d-flex color-wrapper gap-3">
+      <div class="d-flex flex-row">
+        <div class="col-6 d-flex color-wrapper gap-3 mb-5">
           <h4 class="item-color-text">Color</h4>
           <div data-item-color="black" class="rounded-circle active item-color item-color-black"></div>
           <div data-item-color="golden" class="rounded-circle item-color item-color-golden"></div>
           <div data-item-color="silver" class="rounded-circle item-color item-color-silver"></div>
         </div>
-        <div class="col-6 item-size-wrapper d-flex size-wrapper gap-3">
+        <div class="col-6 d-flex size-wrapper gap-3">
           <h4 class="item-size-text">Size</h4>
           <div data-item-size="small" class="active item-size item-size-small">S</div>
           <div data-item-size="medium" class="item-size item-size-medium">M</div>
@@ -160,28 +97,217 @@
         </div>
       </div>
     </div>
+  </main>
 
-      <div>
-      <div class="mb-10 item-in-basket">
-        <div class="subtotal-wrapper pt-3 d-flex flex-row justify-content-between align-items-center">
+  <footer class="main-page">
+    <div class="row bg-black height-50 text-white w-100 mx-0" id="basket-wrapper">
+      <div class="d-flex justify-content-between my-2" id="add-to-basket-wrapper">
+        <div class="d-flex gap-2 mx-2 cursor-pointer" id="add-to-basket-button">
+          <i class="bi bi-plus-lg cursor-pointer"></i>
+          <div class="add-to-basket-text">Add to basket</div>
+        </div>
+        <i class="bi bi-suit-heart heart-icon mx-2 cursor-pointer" id="heart-icon"></i>
+
+      </div>
+      <div class="d-flex justify-content-center gap-3 align-items-center invisible" id="amount-basket-wrapper">
+        <i class="font-24 bi bi-dash-circle circle-icon cursor-pointer minus-item-button"></i>
+        <h6 class="font-24 my-0 item-amount">2</h6>
+        <i class="font-24 bi bi-plus-circle circle-icon cursor-pointer plus-item-button"></i>
+
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="w-100 h-100 invisible" id="cart" style="background-color: white; z-index: 2;">
+    <div class="height-50 d-flex align-items-center">
+      <i class="bi bi-x-lg mx-5 cursor-pointer" id="close-cart-button"></i>
+    </div>
+    <h1 class="cart-title invisible">CART</h1>
+    <h1 class="mx-5 cart-title no-item-in-basket small-text">CART</h1>
+    <div class="no-item-in-basket d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <p>You have no items in your Shopping Bag.</p>
+    </div>
+    <div
+      class="no-item-in-basket bg-black text-white w-100 mx-0 d-flex flex-row justify-content-center align-items-center">
+      <img src="assets/images/buying.png" style="width: 25px; height: 25px;">
+      <h1 class="buy-now-button my-0 cursor-pointer">Continue Shopping</h1>
+    </div>
+    <div class="d-flex flex-column justify-content-between invisible" id="cart-page-wrapper">
+      <div class="cart-page h-100 mx-5 d-flex flex-column justify-content-between" style="min-height: 100vh !important">
+        <div class="item-in-basket">
+          <h1 class="cart-title">CART</h1>
+          <div class="row">
+            <div class="col-3">
+              <img class="img-fluid" src="assets/images/carousel-1.png" alt="purchased-item">
+            </div>
+            <div class="col-9 d-flex flex-column justify-content-between">
+              <h1 class="item-name">MOHAN</h1>
+              <h2 class="item-desc">Recycle Boucle Knit Cardigan Pink</h2>
+              <div class="d-flex gap-3 align-items-center">
+                <i class="font-24 bi bi-dash-circle cursor-pointer minus-item-button"></i>
+                <h6 class="font-24 my-0 item-amount">2</h6>
+                <i class="font-24 bi bi-plus-circle cursor-pointer plus-item-button"></i>
+              </div>
+              <h3 class="item-price">$120</h3>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-6 d-flex color-wrapper gap-3">
+              <h4 class="item-color-text">Color</h4>
+              <div data-item-color="black" class="rounded-circle active item-color item-color-black"></div>
+              <div data-item-color="golden" class="rounded-circle item-color item-color-golden"></div>
+              <div data-item-color="silver" class="rounded-circle item-color item-color-silver"></div>
+            </div>
+            <div class="col-6 d-flex size-wrapper gap-3">
+              <h4 class="item-size-text">Size</h4>
+              <div data-item-size="small" class="active item-size item-size-small">S</div>
+              <div data-item-size="medium" class="item-size item-size-medium">M</div>
+              <div data-item-size="large" class="item-size item-size-large">L</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="item-in-basket">
+        <div class="subtotal-wrapper mx-5 pt-3 d-flex flex-row justify-content-between align-items-center">
           <h1 class="subtotal-text font-tenor">SUB TOTAL</h1>
           <h2 class="subtotal-price font-tenor item-price" id="subtotal-price"></h2>
         </div>
-        <p class="disclaimer">*shipping charges, taxes and discount codes   are calculated at the time of accounting.</p>
-      </div>
-
-      <footer class="bottom-important">
+        <p class="disclaimer mx-5">*shipping charges, taxes and discount codes are calculated at the time of accounting.
+        </p>
+        <!-- <footer class="bottom-important"> -->
         <div class="bg-black text-white w-100 mx-0 d-flex flex-row justify-content-center align-items-center">
           <img src="assets/images/buying.png" style="width: 25px; height: 25px;">
-          <h1 class="buy-now-button">BUY NOW</h1>
+          <h1 class="buy-now-button my-0 cursor-pointer">BUY NOW</h1>
         </div>
-      </footer> 
+        <!-- </footer>  -->
+      </div>
+    </div>
+  </div>
+  </div>
 
+  <div class="mx-4 invisible" id="menu-page">
+    <div class="height-50 d-flex align-items-center">
+      <i class="bi bi-x-lg ms-3 cursor-pointer cursor-pointer" id="close-menu-button"></i>
+    </div>
+
+    <ul class="nav d-flex justify-content-between pe-5 mb-3  clothing-navbar">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#" id="women-tab">WOMEN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="man-tab">MAN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="kids-tab">KIDS</a>
+      </li>
+    </ul>
+
+    <ul class="nav flex-column clothing-dropdown">
+      <div id="women-tab-content">
+        <li class="nav-item" id="menu-new-container">
+          <a class="nav-link menu-dropdown cursor-pointer">
+            <div class="d-flex justify-content-between">
+              <h2 id="menu-new">New</h2>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item" id="menu-apparel-container">
+          <a class="nav-link menu-dropdown cursor-pointer">
+            <div class="d-flex justify-content-between">
+              <h2 id="menu-apparel">Apparel</h2>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item" id="menu-bag-container">
+          <a class="nav-link menu-dropdown cursor-pointer">
+            <div class="d-flex justify-content-between">
+              <h2 id="menu-bag">Bag</h2>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item" id="menu-shoes-container">
+          <a class="nav-link menu-dropdown cursor-pointer">
+            <div class="d-flex justify-content-between">
+              <h2 id="menu-shoes">Shoes</h2>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item" id="menu-beauty-container">
+          <a class="nav-link menu-dropdown cursor-pointer">
+            <div class="d-flex justify-content-between">
+              <h2 id="menu-beauty">Beauty</h2>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item" id="menu-accessories-container">
+          <a class="nav-link menu-dropdown cursor-pointer">
+            <div class="d-flex justify-content-between">
+              <h2 id="menu-accessories">Accessories</h2>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </a>
+        </li>
+      </div>
+      <div id="man-tab-content invisible">
+
+      </div>
+      <div id="kids-tab-content invisible">
+
+      </div>
+
+    </ul>
+
+    <div class="bottom-wrapper mt-4 mb-2">
+      <div class="mx-3 d-flex flex-column gap-2">
+        <div class="d-flex align-items-center flex-row gap-2">
+          <i class="bi bi-telephone"></i>
+          <h5 class="m-0">(786) 713-8616</h5>
+        </div>
+
+        <div class="d-flex align-items-center flex-row gap-2">
+          <i class="bi bi-geo-alt"></i>
+          <h5 class="m-0">Store locator</h5>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center gap-3">
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-youtube"></i>
+        </div>
       </div>
     </div>
 
-    </div>
+
   </div>
+
+
+
+  <!-- <ul class="nav flex-column">
+    <li class="nav-item dropdown">
+      <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul> -->
+
+
 
 
 
@@ -196,18 +322,20 @@
 
   <!-- Bootstrap JavaScript Libraries -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+    integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="scripts/main.js"></script>
-  
+
 </body>
 
 </html>

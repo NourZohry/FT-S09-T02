@@ -13,6 +13,9 @@ function decrementCounter() {
         $(".item-in-basket").addClass("invisible");
         $(".no-item-in-basket").removeClass("invisible");
 
+        $("#cart-page-wrapper").addClass("invisible");
+
+
         $('#basket-wrapper').children().toggleClass("invisible");
     }
 }
@@ -51,6 +54,46 @@ function activeSelect(text) {
     }
 }
 
+function navGeneration(nav) {
+    var li = $("<li>", {"class": "nav-item cursor-pointer"});
+    var a = $("<a>", {"class": "nav-link"});
+    a.href = "#"; // Can be adjusted
+    a.text(nav);
+    li.append(a);
+    return li;
+}
+
+function ulGeneration(navArray, menuColName) {
+    var ul = $("<ul>", {"class": "nav d-flex flex-column ms-3", "id": "menu-col-" + menuColName});
+    for (let i = 0; i < navArray.length; i++) {
+        ul.append(navGeneration(navArray[i]));
+    }
+    return ul;
+}
+
+let newMenu = ["Outer", "Dress", "Blouse/Shirt", "T-Shirt", "Knitwear", "Skirt", "Pants", "Denim", "Kids"];
+let newAppend = ulGeneration(newMenu, "new");
+
+let apparelMenu = ["Outer", "Dress", "Blouse/Shirt", "T-Shirt", "Knitwear", "Skirt", "Pants", "Denim", "Kids"];
+let apparelAppend = ulGeneration(apparelMenu, "apparel");
+
+let bagMenu = ["Outer", "Dress", "Blouse/Shirt", "T-Shirt", "Knitwear", "Skirt", "Pants", "Denim", "Kids"];
+let bagAppend = ulGeneration(bagMenu, "bag");
+
+let shoesMenu = ["Outer", "Dress", "Blouse/Shirt", "T-Shirt", "Knitwear", "Skirt", "Pants", "Denim", "Kids"];
+let shoesAppend = ulGeneration(shoesMenu, "shoes");
+
+let beautyMenu = ["Outer", "Dress", "Blouse/Shirt", "T-Shirt", "Knitwear", "Skirt", "Pants", "Denim", "Kids"];
+let beautyAppend = ulGeneration(beautyMenu, "beauty");
+
+let accessoriesMenu = ["Outer", "Dress", "Blouse/Shirt", "T-Shirt", "Knitwear", "Skirt", "Pants", "Denim", "Kids"];
+let accessoriesAppend = ulGeneration(accessoriesMenu, "accessories");
+
+
+let listMenu = [newMenu, apparelMenu, bagMenu, shoesMenu, beautyMenu, accessoriesMenu];
+let listAppend = [newAppend, apparelAppend, bagAppend, shoesAppend, beautyAppend, accessoriesAppend];
+let listNames = ['new', 'apparel', 'bag', 'shoes', 'beauty', 'accessories'];
+
 let purchaseDetails = {
     "amount": 0,
     "color": $(".item-color.active").attr("data-item-color"), 
@@ -62,8 +105,8 @@ $(document).ready(function(){
 
     $("#add-to-basket-button").click(function(){
         $('#basket-wrapper').children().toggleClass("invisible");
-        $(".item-amount").text("2");
-        purchaseDetails['amount'] = 2;
+        $(".item-amount").text("1");
+        purchaseDetails['amount'] = 1;
     });
 
     minusItemButton = $(".minus-item-button");
@@ -79,11 +122,16 @@ $(document).ready(function(){
     
         $("#cart-button, #close-cart-button").click(function() {
             $("#cart").toggleClass("invisible");
+            $("#cart-page").toggleClass("invisible");
+            $(".main-page").toggleClass("invisible");
             if (purchaseDetails['amount'] == 0) {
                 $(".item-in-basket").addClass("invisible");
                 $(".no-item-in-basket").removeClass("invisible");
+                $("#cart-page-wrapper").addClass("invisible");
+
             }
             else {
+                $("#cart-page-wrapper").removeClass("invisible");
                 $(".item-in-basket").removeClass("invisible");
                 $(".no-item-in-basket").addClass("invisible");
                 $("#subtotal-price").text("$" + (purchaseDetails['amount'] * 120).toString());
@@ -91,54 +139,68 @@ $(document).ready(function(){
         });
 
 
+    // Menu
+    $("#menu-button, #close-menu-button").click(function() {
+        $("#menu-page").toggleClass("invisible");
+        $(".main-page").toggleClass("invisible");
+    });
+
+    $("#women-tab").click(function() {
+        $("#women-tab").addClass("active");
+        $("#man-tab").removeClass("active");
+        $("#kids-tab").removeClass("active");
+        
+        $("#women-tab-content").removeClass("invisible");
+        $("#man-tab-content").addClass("invisible");
+        $("#kids-tab-content").addClass("invisible");
+    });
+
+    $("#man-tab").click(function() {
+        $("#women-tab").removeClass("active");
+        $("#man-tab").addClass("active");
+        $("#kids-tab").removeClass("active");
+
+        $("#women-tab-content").addClass("invisible");
+        $("#man-tab-content").removeClass("invisible");
+        $("#kids-tab-content").addClass("invisible");
+    });
+
+    $("#kids-tab").click(function() {
+        $("#women-tab").removeClass("active");
+        $("#man-tab").removeClass("active");
+        $("#kids-tab").addClass("active");
+
+        $("#women-tab-content").addClass("invisible");
+        $("#man-tab-content").addClass("invisible");
+        $("#kids-tab-content").removeClass("invisible");
+    });
+
+
+    for (let i = 0; i < listMenu.length; i++) {
+        $("#menu-" + listNames[i] + "-container").click(function() {
+            if ($("#menu-col-" + listNames[i]).children().length > 0) {
+                $("#menu-col-" + listNames[i]).children().toggleClass("invisible");
+            }
+            else {
+                $("#menu-" + listNames[i] + "-container").after(listAppend[i]);
+            }
+        })
+                
+    }
+
+    // $("#menu-apparel-container").click(function() {
+    //     if ($("#menu-col-apparel").children().length > 0) {
+    //         $("#menu-col-apparel").children().toggleClass("invisible");
+    //     }
+    //     else {
+    //         $("#menu-apparel-container").after(apparelAppend);
+    //     }
+    // })
+
+
         
     
-    // /* Cart */
-    // mainContainer = $("#main-container");
-    // cartContainer = $("#cart-container");
-    // // $("#cart-button").click(function() {
-    // //     console.log("Click!");
-    // //     mainContainer.remove();
-    // //     cartContainer.toggleClass("invisible");
-
-
-    // //     // $("#main-body").add();
-    // //     // $("#page-cart").toggleClass("invisible");
-    // // });
-
-    // cartTitle = $("h1");
-    // cartTitle.text("CART");
-
-    // cartItem = $("<div>", {"class": "d-flex flex-row"});
-    // cartItemImg = $("<img>", {"src": "assets/images/carousel-1.png"});
-    // cartItemInfo = $("<div>", {"class": "d-flex flex-column"});
-    // cartItemTitle = $("<h1>");
-    // cartItemTitle.text("MOHAN");
-    // cartItemDesc = $("<h2>");
-    // cartItemDesc.text("Recycle Boucle Knit Cardigan Pink");
-    // cartItemPrice = $("<h3>");
-    // cartItemPrice.text("$120");
-    
-    // cartItem.append(cartItemImg, cartItemInfo);
-
-    // cartItemInfo.append(cartItemTitle, cartItemDesc, cartItemPrice);
-
-
-    // $("#cart-button").click(function() {
-    //     // Header
-    //     $("header").empty();
-    //     let container = $("<div>", {"class": "container"});
-    //     $("header").append(container);
-    //     let icon = $("<i>", {"class": "bi bi-x-lg", "id": "cart-close-button"});
-    //     $("header").children('.container').append(icon);
-
-    //     // Main
-    //     $("main").empty();
-    //     $("main").append([cartTitle]);
-
-    //     $("main").append([cartItem]);
-
-    // });
+    // Extra
 
 
     $("#heart-icon").click(function() {

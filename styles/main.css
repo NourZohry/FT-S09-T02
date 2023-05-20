@@ -1,3 +1,22 @@
+.clothing-navbar {
+  border-bottom: 1px solid #E1E0DB;
+  position: relative;
+  display: block;
+}
+.clothing-navbar a {
+  opacity: 0.5;
+  color: #333333;
+}
+.clothing-navbar a.active {
+  opacity: 1;
+  color: #333333;
+}
+
+.clothing-dropdown h2, .clothing-dropdown a {
+  color: #333333;
+  font-size: 20px;
+}
+
 body {
   font-family: "Tenor Sans", sans-serif;
 }
@@ -46,28 +65,28 @@ body {
   color: #888888;
 }
 
-.item-color-wrapper .item-color {
+.item-color {
   width: 30px;
   height: 30px;
 }
-.item-color-wrapper .item-color.active {
+.item-color.active {
   border: 2px solid white;
   outline: 1px solid #888888;
 }
-.item-color-wrapper .item-color:hover {
+.item-color:hover {
   cursor: pointer;
 }
-.item-color-wrapper .item-color-black {
+.item-color.item-color-black {
   background-color: black;
 }
-.item-color-wrapper .item-color-golden {
+.item-color.item-color-golden {
   background-color: #DD8560;
 }
-.item-color-wrapper .item-color-silver {
+.item-color.item-color-silver {
   background-color: #E1E0DB;
 }
 
-.item-size-wrapper .item-size {
+.item-size {
   width: 30px;
   height: 30px;
   background-color: white;
@@ -75,11 +94,11 @@ body {
   text-align: center;
   border-radius: 100%;
 }
-.item-size-wrapper .item-size.active {
+.item-size.active {
   color: white;
   background-color: black;
 }
-.item-size-wrapper .item-size:hover {
+.item-size:hover {
   cursor: pointer;
 }
 
@@ -92,28 +111,12 @@ body {
   letter-spacing: 4px;
 }
 
-#cart-button:hover {
-  cursor: pointer;
-}
-
-#menu-button:hover {
-  cursor: pointer;
-}
-
-.circle-icon {
-  cursor: pointer;
-}
-
-#close-cart-button {
-  cursor: pointer;
+.bottom-border {
+  border-bottom: 1px solid black;
 }
 
 .add-to-basket-text {
   text-transform: uppercase;
-}
-
-.add-to-basket-text:hover {
-  cursor: pointer;
 }
 
 .invisible {
@@ -122,10 +125,6 @@ body {
 
 #heart-icon {
   font-size: 24px;
-}
-
-#heart-icon:hover {
-  cursor: pointer;
 }
 
 .subtotal-wrapper {
@@ -145,4 +144,12 @@ body {
 
 .font-24 {
   font-size: 24px;
+}
+
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.small-text {
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */
